@@ -8,7 +8,7 @@ Siente libre de tratarlo como una ayuda personal para el master, director de jue
 
 Tecnológicamente todo está hecho con HTML, JavaScript y CSS. Yo no soy un experto en ninguna de las tres por eso la he recopilado de stackoverflow y otros foros similares.
 
-Todo lo que aquí se contiene está bajo la licencia **CC BY-NC-SA de Creative Commons**,![CC BY-NC-SA](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Cc-by-nc-sa_euro_icon.svg/2000px-Cc-by-nc-sa_euro_icon.svg.png) esto es:*Esta licencia permite a otros entremezclar, ajustar y construir a partir de esta obra con fines no comerciales, siempre y cuando se reconozcan la autoría y sus nuevas creaciones estén bajo una licencia con los mismos términos.*
+Todo lo que aquí se contiene está bajo la licencia **CC BY-NC-SA de Creative Commons**,![CC BY-NC-SA](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png) esto es: *Esta licencia permite a otros entremezclar, ajustar y construir a partir de esta obra con fines no comerciales, siempre y cuando se reconozcan la autoría y sus nuevas creaciones estén bajo una licencia con los mismos términos.*
 
 ## Lo primero es crear un diagrama para cada escena
 
