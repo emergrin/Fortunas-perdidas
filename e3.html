@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Las Fortunas perdidas: Escena 1</title>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link href="demo2.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript">
+var puntos = [
+  { x: 415, y: 2, z: 515, f: 57, id: "elvalle.html"},
+  { x: 52, y: 118, z: 157, f: 165, id: "jiochi.html"},
+  { x: 3, y: 293, z: 68, f: 359, id: "iuchi.html"},
+  { x: 72, y: 383, z: 136, f: 447, id: "jiochiII.html"},
+  { x: 142, y: 290, z: 210, f: 359, id: "soshi.html"},
+  { x: 188, y: 114, z: 294, f: 168, id: "hafuna.html"},
+  { x: 249, y: 229, z: 351, f: 284, id: "jizo.html"},
+  { x: 313, y: 118, z: 414, f: 167, id: "katsu.html"},
+  { x: 397, y: 190, z: 499, f: 242, id: "templo.html"},
+  { x: 487, y: 114, z: 587, f: 167, id: "minas.html"},
+  { x: 504, y: 259, z: 571, f: 325, id: "minasII.html"},
+  { x: 621, y: 116, z: 722, f: 166, id: "ciudad.html"},
+  { x: 638, y: 221, z: 699, f: 276, id: "explosion.html"},
+  { x: 768, y: 279, z: 836, f: 343, id: "segundo.html"},
+  { x: 619, y: 365, z: 724, f: 417, id: "investigacion.html"},
+  { x: 507, y: 357, z: 573, f: 422, id: "anonimo.html"},
+  { x: 850, y: 114, z: 954, f: 167, id: "yotomo.html"},
+  { x: 872, y: 213, z: 976, f: 265, id: "escondite.html"},
+  { x: 872, y: 302, z: 976, f: 361, id: "batalla.html"},
+  { x: 1021, y: 114, z: 1126, f: 169, id: "petalos.html"},
+  { x: 1079, y: 194, z: 1143, f: 261, id: "charla.html"},
+  { x: 1075, y: 268, z: 1143, f: 336, id: "muerte.html"},
+  { x: 1076, y: 351, z: 1144, f: 414, id: "nihime.html"}
+];
+$(document).ready( function() {
+  $("#dialog").dialog({
+    autoOpen: false,
+    resizable: false,
+    draggable: false,
+    width: 800,
+    height: 800
+  });
+  var index = -1;
+  while ( ++index != puntos.length ) {
+    $("#ayuda").append(
+      $("<area/>").attr( { id: puntos[index].id, shape: "rect", coords: puntos[index].x + "," + puntos[index].y + "," + puntos[index].z + "," + puntos[index].f, title: puntos[index].name, href: "#" } )
+    );
+  }
+  $("area").click( function() {
+    var href = "e3/";
+    href += $(this).attr( "id" );
+    $("#dialog iframe").attr( { src: href, width: "100%", height: "100%" } );
+    $("#dialog").dialog( { title: $(this).attr( "title" ) } );
+    $("#dialog").dialog( "open" );
+    return false;
+  });
+});
+</script>
+</head>
+<body>
+<div id="dialog" title="Ayuda de partida" align="center"overflow=hiiden><iframe></iframe></div>
+<img src="e3.png" usemap="#uno"><br/>
+<map name="uno" id="ayuda" />
+<br/>
+</body>
+</html>

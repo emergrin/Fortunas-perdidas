@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Las Fortunas perdidas: Quien es quien</title>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link href="demo2.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript">
+var puntos = [
+  { x: 33, y: 126, z: 198, f: 211, id: "daiyu.html"},
+  { x: 33, y: 236, z: 198, f: 317, id: "kurosho.html"},
+  { x: 123, y: 342, z: 283, f: 430, id: "hiroichi.html"},
+  { x: 33, y: 456, z: 198, f: 543, id: "tsune.html"},
+  { x: 124, y: 559, z: 282, f: 642, id: "bushatu.html"},
+  { x: 123, y: 667, z: 284, f: 754, id: "hiko.html"},
+  { x: 33, y: 774, z: 198, f: 860, id: "miyahana.html"},
+  { x: 360, y: 132, z: 519, f: 220, id: "bantaro.html"},
+  { x: 442, y: 262, z: 605, f: 344, id: "shinobu.html"},
+  { x: 360, y: 371, z: 519, f: 456, id: "norie.html"},
+  { x: 449, y: 476, z: 610, f: 563, id: "junro.html"},
+  { x: 449, y: 573, z: 610, f: 659, id: "hoji.html"},
+  { x: 449, y: 683, z: 610, f: 771, id: "ichiro.html"},
+  { x: 698, y: 129, z: 858, f: 215, id: "satsume.html"},
+  { x: 700, y: 396, z: 859, f: 458, id: "kenjiro.html"},
+  { x: 694, y: 670, z: 856, f: 753, id: "tsukaru.html"},
+  { x: 937, y: 136, z: 1100, f: 222, id: "noahida.html"},
+  { x: 1020, y: 254, z: 1180, f: 335, id: "heimin.html"},
+  { x: 1020, y: 358, z: 1180, f: 440, id: "sato.html"},
+  { x: 937, y: 464, z: 1100, f: 546, id: "waruko.html"},
+  { x: 976, y: 713, z: 1139, f: 800, id: "oni.html"}
+];
+$(document).ready( function() {
+  $("#dialog").dialog({
+    autoOpen: false,
+    resizable: false,
+    draggable: false,
+    width: 800,
+    height: 1000
+  });
+  var index = -1;
+  while ( ++index != puntos.length ) {
+    $("#ayuda").append(
+      $("<area/>").attr( { id: puntos[index].id, shape: "rect", coords: puntos[index].x + "," + puntos[index].y + "," + puntos[index].z + "," + puntos[index].f, title: puntos[index].name, href: "#" } )
+    );
+  }
+  $("area").click( function() {
+    var href = "qsq/";
+    href += $(this).attr( "id" );
+    $("#dialog iframe").attr( { src: href, width: "100%", height: "100%" } );
+    $("#dialog").dialog( { title: $(this).attr( "title" ) } );
+    $("#dialog").dialog( "open" );
+    return false;
+  });
+});
+</script>
+</head>
+<body>
+<div id="dialog" title="Ayuda de partida" align="center"overflow=hiiden><iframe></iframe></div>
+<img src="qsq.png" usemap="#uno"><br/>
+<map name="uno" id="ayuda" />
+<br/>
+</body>
+</html>

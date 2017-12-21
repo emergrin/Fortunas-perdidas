@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Las Fortunas perdidas: Escena 0</title>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link href="demo2.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript">
+var puntos = [
+  { x: 10, y: 71, z: 65, f: 139, id: "pasado.html"},
+  { x: 10, y: 167, z: 64, f: 234, id: "presente.html"},
+  { x: 131, y: 0, z: 201, f: 67, id: "crimenes.html"},
+  { x: 84, y: 217, z: 151, f: 283, id: "deberes.html"},
+  { x: 185, y: 220, z: 252, f: 282, id: "consejo.html"},
+  { x: 110, y: 303, z: 225, f: 349, id: "responsabilidades.html"},
+  { x: 340, y: 46, z: 444, f: 102, id: "escorpion.html"},
+  { x: 338, y: 121, z: 446, f: 178, id: "unicornio.html"},
+  { x: 479, y: 191, z: 538, f: 254, id: "camino.html"},
+  { x: 640, y: 369, z: 746, f: 424, id: "legiones.html"}
+];
+$(document).ready( function() {
+  $("#dialog").dialog({
+    autoOpen: false,
+    resizable: false,
+    draggable: false,
+    width: 800,
+    height: 800
+  });
+  var index = -1;
+  while ( ++index != puntos.length ) {
+    $("#ayuda").append(
+      $("<area/>").attr( { id: puntos[index].id, shape: "rect", coords: puntos[index].x + "," + puntos[index].y + "," + puntos[index].z + "," + puntos[index].f, title: puntos[index].name, href: "#" } )
+    );
+  }
+  $("area").click( function() {
+    var href = "e0/";
+    href += $(this).attr( "id" );
+    $("#dialog iframe").attr( { src: href, width: "100%", height: "100%" } );
+    $("#dialog").dialog( { title: $(this).attr( "title" ) } );
+    $("#dialog").dialog( "open" );
+    return false;
+  });
+});
+</script>
+</head>
+<body>
+<div id="dialog" title="Ayuda de partida" align="center"overflow=hiiden><iframe></iframe></div>
+<img src="e0.png" usemap="#uno"><br/>
+<map name="uno" id="ayuda" />
+<br/>
+</body>
+</html>

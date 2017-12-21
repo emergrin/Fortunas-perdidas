@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Pontano+Sans|Oleo+Script);
+body {
+	margin-top: 0em;
+	text-align: left;
+	font-family: "Pontano Sans", Helvetica;
+	font-size: 13px;
+	background: rgb(0,0,0,0);
+	background: -moz-radial-gradient(center, ellipse cover,  rgb(0,0,0,0) 0%, rgba(210,207,146,1) 98%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgb(0,0,0,0)), color-stop(98%,rgba(210,207,146,1)));
+	background: -webkit-radial-gradient(center, ellipse cover,  rgb(0,0,0,0) 0%,rgba(210,207,146,1) 98%);
+	background: -o-radial-gradient(center, ellipse cover,  rgb(0,0,0,0) 0%,rgba(210,207,146,1) 98%);
+	background: -ms-radial-gradient(center, ellipse cover,  rgb(0,0,0,0) 0%,rgba(210,207,146,1) 98%);
+	background: radial-gradient(center, ellipse cover,  rgb(0,0,0,0) 0%,rgba(210,207,146,1) 98%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdf7b0', endColorstr='#d2cf92',GradientType=1 );
+}
+h2 {
+	margin: 0em;
+	font-family: "Oleo Script";
+	font-weight: normal;
+	font-size: 30px;
+	color: #673717;
+}
+a, a:visited {
+	margin-top: 0em;
+	font-family: "Oleo Script";
+	font-size: 20px;
+	color: #673717;
+	text-decoration: none;
+}

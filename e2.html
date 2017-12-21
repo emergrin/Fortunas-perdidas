@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Las Fortunas perdidas: Escena 1</title>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link href="demo2.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript">
+var puntos = [
+  { x: 4, y: 124, z: 105, f: 178, id: "shiro.html"},
+  { x: 152, y: 124, z: 256, f: 178, id: "baño.html"},
+  { x: 296, y: 121, z: 397, f: 178, id: "karo.html"},
+  { x: 393, y: 0, z: 459, f: 69, id: "daimyo.html"},
+  { x: 391, y: 244, z: 460, f: 309, id: "tsune.html"},
+  { x: 542, y: 42, z: 645, f: 98, id: "asesinato.html"},
+  { x: 543, y: 126, z: 645, f: 176, id: "derechos.html"},
+  { x: 545, y: 207, z: 646, f: 261, id: "veneno.html"}
+];
+$(document).ready( function() {
+  $("#dialog").dialog({
+    autoOpen: false,
+    resizable: false,
+    draggable: false,
+    width: 800,
+    height: 800
+  });
+  var index = -1;
+  while ( ++index != puntos.length ) {
+    $("#ayuda").append(
+      $("<area/>").attr( { id: puntos[index].id, shape: "rect", coords: puntos[index].x + "," + puntos[index].y + "," + puntos[index].z + "," + puntos[index].f, title: puntos[index].name, href: "#" } )
+    );
+  }
+  $("area").click( function() {
+    var href = "e2/";
+    href += $(this).attr( "id" );
+    $("#dialog iframe").attr( { src: href, width: "100%", height: "100%" } );
+    $("#dialog").dialog( { title: $(this).attr( "title" ) } );
+    $("#dialog").dialog( "open" );
+    return false;
+  });
+});
+</script>
+</head>
+<body>
+<div id="dialog" title="Ayuda de partida" align="center"overflow=hiiden><iframe></iframe></div>
+<img src="e2.png" usemap="#uno"><br/>
+<map name="uno" id="ayuda" />
+<br/>
+</body>
+</html>
