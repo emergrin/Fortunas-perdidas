@@ -6,9 +6,9 @@ Esto no es mas que la transcripción de lo acontecido en la partida presentada, 
 
 Siente libre de tratarlo como una ayuda personal para el master, director de juego o como lo quieras llamar,  y como tal el  master siempre tiene la ultima palabra para adaptarlo a sus personajes.
 
-Tecnológicamente todo está hecho con HTML, JavaScript y CSS. Yo no soy un experto en ninguna de las tres por eso la he recopilado de stackoverflow y otros foros similares.
+Tecnológicamente todo está hecho con HTML, JavaScript y CSS. Yo no soy un experto en ninguna de los tres lenguajes por eso he recopilado de stackoverflow y otros foros similares lo que he necesitado para completar este site.
 
-Todo lo que aquí se contiene está bajo la licencia **CC BY-NC-SA de Creative Commons**,![CC BY-NC-SA](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png)
+Todo lo que aquí se contiene está bajo la licencia **CC BY-NC-SA de Creative Commons**![CC BY-NC-SA](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png)
 
 Esto es: *Esta licencia permite a otros entremezclar, ajustar y construir a partir de esta obra con fines no comerciales, siempre y cuando se reconozcan la autoría y sus nuevas creaciones estén bajo una licencia con los mismos términos.*
 
